@@ -1,0 +1,179 @@
+:root {
+  --verde: #1F4D36;
+  --amarelo: #F2B134;
+  --fundo: #F4F7F2;
+  --superficie: #FFFFFF;
+  --texto: #1B241E;
+  --texto-suave: #4B5A50;
+  --borda: #D3DDD3;
+}
+
+body.escuro {
+  --verde: #8FD0A8;
+  --amarelo: #F2B134;
+  --fundo: #121A15;
+  --superficie: #1B261F;
+  --texto: #ECF2EE;
+  --texto-suave: #B3C2B8;
+  --borda: #2C3B32;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+body {
+  margin: 0;
+  font-family: "Sora", Arial, sans-serif;
+  line-height: 1.65;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--verde); }
+
+/* Cabeçalho */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 5%;
+  background: var(--superficie);
+  border-bottom: 1px solid var(--borda);
+}
+.logo { font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+.menu { display: flex; gap: 1.4rem; }
+.menu a { text-decoration: none; color: var(--texto); font-size: 0.95rem; }
+.menu a:hover { color: var(--verde); text-decoration: underline; }
+
+.btn-tema {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.9rem;
+  border: 2px solid var(--verde);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--verde);
+  cursor: pointer;
+}
+.btn-tema:hover { background: var(--verde); color: var(--fundo); }
+
+/* Início */
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 5rem 5%;
+  background: var(--verde);
+  color: #FFFFFF;
+}
+body.escuro .inicio { background: #1B2E22; }
+.inicio-texto { max-width: 36rem; }
+.inicio-area { margin: 0 0 0.5rem; color: var(--amarelo); font-weight: 600; }
+.inicio h1 { margin: 0 0 1rem; font-size: 2.4rem; line-height: 1.2; }
+.inicio-foto { width: 260px; height: 260px; border-radius: 50%; border: 6px solid var(--amarelo); flex-shrink: 0; }
+
+/* Botões */
+.botao {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--amarelo);
+  color: #1B241E;
+  text-decoration: none;
+  cursor: pointer;
+}
+.botao:hover { filter: brightness(0.92); }
+
+/* Seções */
+.secao { max-width: 62rem; margin: 0 auto; padding: 4rem 5%; }
+.secao h2 { margin: 0 0 1rem; font-size: 1.8rem; color: var(--verde); }
+.secao p { max-width: 45rem; color: var(--texto-suave); }
+
+/* Habilidades */
+.lista-habilidades {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.lista-habilidades li {
+  padding: 0.6rem 1.1rem;
+  border: 2px solid var(--verde);
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Projetos */
+.projetos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.projeto {
+  padding: 1.2rem;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+}
+.projeto img { width: 100%; border-radius: 6px; margin-bottom: 1rem; }
+.projeto h3 { margin: 0 0 0.4rem; }
+.projeto p { margin: 0; font-size: 0.95rem; }
+
+/* Formulário */
+.formulario { max-width: 34rem; display: flex; flex-direction: column; gap: 1.1rem; }
+.campo { display: flex; flex-direction: column; gap: 0.35rem; }
+.campo label { font-weight: 600; }
+.campo input, .campo textarea {
+  font: inherit;
+  padding: 0.7rem;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: var(--superficie);
+  color: var(--texto);
+}
+.campo input:focus, .campo textarea:focus, .btn-tema:focus-visible, .botao:focus-visible, a:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 2px;
+}
+.campo .invalido { border-color: #C0392B; }
+.formulario .botao { align-self: flex-start; }
+.retorno { margin: 0; font-weight: 600; }
+.retorno.ok { color: var(--verde); }
+.retorno.erro { color: #C0392B; }
+
+/* Rodapé */
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1.5rem 5%;
+  border-top: 1px solid var(--borda);
+  background: var(--superficie);
+  font-size: 0.9rem;
+}
+.rodape p { margin: 0; }
+
+/* Celular (Parte B) */
+@media (max-width: 700px) {
+  .cabecalho { flex-wrap: wrap; justify-content: center; }
+  .menu { order: 3; width: 100%; justify-content: space-between; gap: 0.5rem; }
+  .menu a { font-size: 0.85rem; }
+  .inicio { flex-direction: column-reverse; text-align: center; padding: 3rem 5%; gap: 2rem; }
+  .inicio h1 { font-size: 1.7rem; }
+  .inicio-foto { width: 180px; height: 180px; }
+  .projetos { grid-template-columns: 1fr; }
+  .rodape { flex-direction: column; text-align: center; }
+}
