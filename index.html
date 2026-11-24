@@ -11,3 +11,135 @@
     
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leandro de Paula dos Santos | Portfólio</title>
+  <meta name="description" content="Portfólio pessoal de Seu Nome, estudante de desenvolvimento web.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. CABEÇALHO -->
+  <header class="cabecalho">
+    <a class="logo" href="#inicio">Leandro de Paula</a>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button id="btn-tema" class="btn-tema" type="button" aria-pressed="false">Tema escuro</button>
+  </header>
+
+  <main>
+    <!-- 2. INÍCIO -->
+    <section id="inicio" class="inicio">
+      <div class="inicio-texto">
+        <p class="inicio-area">Desenvolvimento web</p>
+        <h1>Seja bem-vindo(a) ao meu primeiro site!</h1>
+        <p>Estudo Desenvolvimento de Sistemas no Senai Itumbiara - GO e sigo aprimorando meus conhecimento todos os dias sobre alguns temas específicos como, Programação e Tecnologia.</p>
+        <a class="botao" href="#contato">Baixar currículo</a>
+      </div>
+      <img class="inicio-foto" src="imagens/perfil.svg" alt="Ilustração de perfil com as iniciais do autor do portfólio">
+    </section>
+
+    <!-- 3. SOBRE MIM -->
+    <section id="sobre" class="secao">
+      <h2>Sobre mim</h2>
+      <p>Sou estudante de Desenvolvimento de Sistemas no Senai unidade de Itumbiara - GO e estou aprendendo a criar sites do zero, passando por estrutura, estilo e interação. Gosto de resolver problemas em equipe e de manter meu trabalho sempre alinhado com Git e GitHub.</p>
+      <p>Meu objetivo é entrar na área de tecnologia e construir soluções úteis para as áreas da Mecânica em geral, como mecatrônica, eletromecânica e seguimentos variados da Engenharia Mecânica em geral.</p>
+    </section>
+
+    <!-- 4. HABILIDADES -->
+    <section id="habilidades" class="secao">
+      <h2>Habilidades</h2>
+      <ul class="lista-habilidades">
+        <li>Linguagens e lógicas de programaçaõ</li>
+        <li>Interatividade entre tecnologia e mecânica industrial</li>
+        <li>JavaScript básico</li>
+        <li>Git e GitHub</li>
+        <li>Python básico</li>
+        <li>Trabalho em equipe</li>
+      </ul>
+    </section>
+
+    <!-- 5. PROJETOS -->
+    <section id="projetos" class="secao">
+      <h2>Projetos</h2>
+      <div class="projetos">
+        <article class="projeto">
+          <img src="imagens/projeto-agrolog.svg" alt="Esboço de um painel de logística com caminhão e mapa">
+          <h3>AgroLog</h3>
+          <p>Projeto em squad do curso, com foco em organizar a logística do agronegócio.</p>
+        </article>
+        <article class="projeto">
+          <img src="imagens/projeto-portfolio.svg" alt="Esboço de página de portfólio com cabeçalho e seções">
+          <h3>Portfólio pessoal</h3>
+          <p>Este site, feito do zero com HTML, CSS e JavaScript e versionado no GitHub.</p>
+        </article>
+        <article class="projeto">
+          <img src="imagens/projeto-tcc.svg" alt="Ilustração de livro aberto com um gráfico">
+          <h3>TCC (em andamento)</h3>
+          <p>Trabalho de conclusão de curso em grupo ou individual, com repositório próprio no GitHub.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. CONTATO -->
+    <section id="contato" class="secao">
+      <h2>Contato</h2>
+      <p>Quer conversar? Preencha o formulário.</p>
+      <form id="form-contato" class="formulario" novalidate>
+        <div class="campo">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="campo">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        </div>
+        <button class="botao" type="submit">Enviar mensagem</button>
+        <p id="retorno" class="retorno" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- 7. RODAPÉ -->
+  <footer class="rodape">
+    <p>&copy; 2026 Seu Nome. Todos os direitos reservados.</p>
+    <p><a href="https://github.com/seu-usuario" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
